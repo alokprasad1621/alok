@@ -1,0 +1,898 @@
+[
+ {
+  "word": "A",
+  "start": 0.4
+ },
+ {
+  "word": "wave",
+  "start": 0.67
+ },
+ {
+  "word": "of",
+  "start": 0.941
+ },
+ {
+  "word": "molasses",
+  "start": 1.211
+ },
+ {
+  "word": "once",
+  "start": 1.481
+ },
+ {
+  "word": "buried",
+  "start": 1.751
+ },
+ {
+  "word": "a",
+  "start": 2.022
+ },
+ {
+  "word": "Boston",
+  "start": 2.292
+ },
+ {
+  "word": "street",
+  "start": 2.562
+ },
+ {
+  "word": "faster",
+  "start": 2.832
+ },
+ {
+  "word": "than",
+  "start": 3.103
+ },
+ {
+  "word": "anyone",
+  "start": 3.373
+ },
+ {
+  "word": "could",
+  "start": 3.643
+ },
+ {
+  "word": "run",
+  "start": 3.914
+ },
+ {
+  "word": "January",
+  "start": 4.404
+ },
+ {
+  "word": "1919",
+  "start": 4.674
+ },
+ {
+  "word": "Boston's",
+  "start": 4.944
+ },
+ {
+  "word": "new",
+  "start": 5.215
+ },
+ {
+  "word": "fifty",
+  "start": 5.485
+ },
+ {
+  "word": "foot",
+  "start": 5.755
+ },
+ {
+  "word": "tank",
+  "start": 6.025
+ },
+ {
+  "word": "holds",
+  "start": 6.296
+ },
+ {
+  "word": "two",
+  "start": 6.566
+ },
+ {
+  "word": "million",
+  "start": 6.836
+ },
+ {
+  "word": "gallons",
+  "start": 7.106
+ },
+ {
+  "word": "of",
+  "start": 7.377
+ },
+ {
+  "word": "syrup",
+  "start": 7.647
+ },
+ {
+  "word": "right",
+  "start": 7.917
+ },
+ {
+  "word": "beside",
+  "start": 8.188
+ },
+ {
+  "word": "homes",
+  "start": 8.458
+ },
+ {
+  "word": "a",
+  "start": 8.728
+ },
+ {
+  "word": "firehouse",
+  "start": 8.998
+ },
+ {
+  "word": "and",
+  "start": 9.269
+ },
+ {
+  "word": "an",
+  "start": 9.539
+ },
+ {
+  "word": "elevated",
+  "start": 9.809
+ },
+ {
+  "word": "train",
+  "start": 10.079
+ },
+ {
+  "word": "For",
+  "start": 10.92
+ },
+ {
+  "word": "two",
+  "start": 11.19
+ },
+ {
+  "word": "years",
+  "start": 11.46
+ },
+ {
+  "word": "the",
+  "start": 11.731
+ },
+ {
+  "word": "tank",
+  "start": 12.001
+ },
+ {
+  "word": "groaned",
+  "start": 12.271
+ },
+ {
+  "word": "and",
+  "start": 12.541
+ },
+ {
+  "word": "wept",
+  "start": 12.812
+ },
+ {
+  "word": "at",
+  "start": 13.082
+ },
+ {
+  "word": "the",
+  "start": 13.352
+ },
+ {
+  "word": "seams",
+  "start": 13.622
+ },
+ {
+  "word": "and",
+  "start": 13.893
+ },
+ {
+  "word": "the",
+  "start": 14.163
+ },
+ {
+  "word": "neighbours",
+  "start": 14.433
+ },
+ {
+  "word": "just",
+  "start": 14.704
+ },
+ {
+  "word": "brought",
+  "start": 14.974
+ },
+ {
+  "word": "buckets",
+  "start": 15.244
+ },
+ {
+  "word": "But",
+  "start": 15.734
+ },
+ {
+  "word": "today",
+  "start": 16.005
+ },
+ {
+  "word": "is",
+  "start": 16.275
+ },
+ {
+  "word": "the",
+  "start": 16.545
+ },
+ {
+  "word": "first",
+  "start": 16.815
+ },
+ {
+  "word": "warm",
+  "start": 17.086
+ },
+ {
+  "word": "day",
+  "start": 17.356
+ },
+ {
+  "word": "after",
+  "start": 17.626
+ },
+ {
+  "word": "a",
+  "start": 17.896
+ },
+ {
+  "word": "cold",
+  "start": 18.167
+ },
+ {
+  "word": "snap",
+  "start": 18.437
+ },
+ {
+  "word": "and",
+  "start": 18.707
+ },
+ {
+  "word": "the",
+  "start": 18.978
+ },
+ {
+  "word": "whole",
+  "start": 19.248
+ },
+ {
+  "word": "tank",
+  "start": 19.518
+ },
+ {
+  "word": "is",
+  "start": 19.788
+ },
+ {
+  "word": "awake",
+  "start": 20.059
+ },
+ {
+  "word": "Wait",
+  "start": 20.549
+ },
+ {
+  "word": "How",
+  "start": 20.819
+ },
+ {
+  "word": "does",
+  "start": 21.089
+ },
+ {
+  "word": "warm",
+  "start": 21.36
+ },
+ {
+  "word": "weather",
+  "start": 21.63
+ },
+ {
+  "word": "scare",
+  "start": 21.9
+ },
+ {
+  "word": "a",
+  "start": 22.171
+ },
+ {
+  "word": "metal",
+  "start": 22.441
+ },
+ {
+  "word": "tank?",
+  "start": 22.711
+ },
+ {
+  "word": "By",
+  "start": 23.201
+ },
+ {
+  "word": "noon",
+  "start": 23.472
+ },
+ {
+  "word": "the",
+  "start": 23.742
+ },
+ {
+  "word": "groans",
+  "start": 24.012
+ },
+ {
+  "word": "are",
+  "start": 24.282
+ },
+ {
+  "word": "so",
+  "start": 24.553
+ },
+ {
+  "word": "loud",
+  "start": 24.823
+ },
+ {
+  "word": "that",
+  "start": 25.093
+ },
+ {
+  "word": "workers",
+  "start": 25.364
+ },
+ {
+  "word": "phone",
+  "start": 25.634
+ },
+ {
+  "word": "the",
+  "start": 25.904
+ },
+ {
+  "word": "office",
+  "start": 26.174
+ },
+ {
+  "word": "and",
+  "start": 26.445
+ },
+ {
+  "word": "the",
+  "start": 26.715
+ },
+ {
+  "word": "office",
+  "start": 26.985
+ },
+ {
+  "word": "says",
+  "start": 27.255
+ },
+ {
+  "word": "it's",
+  "start": 27.526
+ },
+ {
+  "word": "fine",
+  "start": 27.796
+ },
+ {
+  "word": "At",
+  "start": 28.636
+ },
+ {
+  "word": "half",
+  "start": 28.906
+ },
+ {
+  "word": "past",
+  "start": 29.177
+ },
+ {
+  "word": "twelve",
+  "start": 29.447
+ },
+ {
+  "word": "the",
+  "start": 29.717
+ },
+ {
+  "word": "rivets",
+  "start": 29.988
+ },
+ {
+  "word": "fire",
+  "start": 30.258
+ },
+ {
+  "word": "off",
+  "start": 30.528
+ },
+ {
+  "word": "like",
+  "start": 30.798
+ },
+ {
+  "word": "rifle",
+  "start": 31.069
+ },
+ {
+  "word": "shots",
+  "start": 31.339
+ },
+ {
+  "word": "the",
+  "start": 31.609
+ },
+ {
+  "word": "plates",
+  "start": 31.879
+ },
+ {
+  "word": "unzip",
+  "start": 32.15
+ },
+ {
+  "word": "and",
+  "start": 32.42
+ },
+ {
+  "word": "the",
+  "start": 32.69
+ },
+ {
+  "word": "street",
+  "start": 32.961
+ },
+ {
+  "word": "disappears",
+  "start": 33.231
+ },
+ {
+  "word": "under",
+  "start": 33.501
+ },
+ {
+  "word": "a",
+  "start": 33.771
+ },
+ {
+  "word": "two",
+  "start": 34.042
+ },
+ {
+  "word": "storey",
+  "start": 34.312
+ },
+ {
+  "word": "wave",
+  "start": 34.582
+ },
+ {
+  "word": "going",
+  "start": 34.852
+ },
+ {
+  "word": "thirty",
+  "start": 35.123
+ },
+ {
+  "word": "five",
+  "start": 35.393
+ },
+ {
+  "word": "miles",
+  "start": 35.663
+ },
+ {
+  "word": "an",
+  "start": 35.934
+ },
+ {
+  "word": "hour",
+  "start": 36.204
+ },
+ {
+  "word": "Luckily",
+  "start": 36.694
+ },
+ {
+  "word": "molasses",
+  "start": 36.964
+ },
+ {
+  "word": "is",
+  "start": 37.235
+ },
+ {
+  "word": "thicker",
+  "start": 37.505
+ },
+ {
+  "word": "than",
+  "start": 37.775
+ },
+ {
+  "word": "water",
+  "start": 38.045
+ },
+ {
+  "word": "Unluckily",
+  "start": 38.316
+ },
+ {
+  "word": "molasses",
+  "start": 38.586
+ },
+ {
+  "word": "at",
+  "start": 38.856
+ },
+ {
+  "word": "thirty",
+  "start": 39.126
+ },
+ {
+  "word": "five",
+  "start": 39.397
+ },
+ {
+  "word": "miles",
+  "start": 39.667
+ },
+ {
+  "word": "an",
+  "start": 39.937
+ },
+ {
+  "word": "hour",
+  "start": 40.208
+ },
+ {
+  "word": "is",
+  "start": 40.478
+ },
+ {
+  "word": "thicker",
+  "start": 40.748
+ },
+ {
+  "word": "than",
+  "start": 41.018
+ },
+ {
+  "word": "you",
+  "start": 41.289
+ },
+ {
+  "word": "You",
+  "start": 42.129
+ },
+ {
+  "word": "see",
+  "start": 42.399
+ },
+ {
+  "word": "syrup",
+  "start": 42.669
+ },
+ {
+  "word": "in",
+  "start": 42.94
+ },
+ {
+  "word": "a",
+  "start": 43.21
+ },
+ {
+  "word": "sealed",
+  "start": 43.48
+ },
+ {
+  "word": "tank",
+  "start": 43.751
+ },
+ {
+  "word": "pushes",
+  "start": 44.021
+ },
+ {
+  "word": "on",
+  "start": 44.291
+ },
+ {
+  "word": "the",
+  "start": 44.561
+ },
+ {
+  "word": "sides",
+  "start": 44.832
+ },
+ {
+  "word": "like",
+  "start": 45.102
+ },
+ {
+  "word": "soda",
+  "start": 45.372
+ },
+ {
+  "word": "in",
+  "start": 45.642
+ },
+ {
+  "word": "a",
+  "start": 45.913
+ },
+ {
+  "word": "can",
+  "start": 46.183
+ },
+ {
+  "word": "you",
+  "start": 46.453
+ },
+ {
+  "word": "just",
+  "start": 46.724
+ },
+ {
+  "word": "shook",
+  "start": 46.994
+ },
+ {
+  "word": "And",
+  "start": 47.484
+ },
+ {
+  "word": "this",
+  "start": 47.754
+ },
+ {
+  "word": "can",
+  "start": 48.025
+ },
+ {
+  "word": "went",
+  "start": 48.295
+ },
+ {
+  "word": "up",
+  "start": 48.565
+ },
+ {
+  "word": "in",
+  "start": 48.835
+ },
+ {
+  "word": "a",
+  "start": 49.106
+ },
+ {
+  "word": "rush",
+  "start": 49.376
+ },
+ {
+  "word": "from",
+  "start": 49.646
+ },
+ {
+  "word": "steel",
+  "start": 49.916
+ },
+ {
+  "word": "half",
+  "start": 50.187
+ },
+ {
+  "word": "as",
+  "start": 50.457
+ },
+ {
+  "word": "thick",
+  "start": 50.727
+ },
+ {
+  "word": "as",
+  "start": 50.998
+ },
+ {
+  "word": "the",
+  "start": 51.268
+ },
+ {
+  "word": "rules",
+  "start": 51.538
+ },
+ {
+  "word": "wanted",
+  "start": 51.808
+ },
+ {
+  "word": "and",
+  "start": 52.079
+ },
+ {
+  "word": "was",
+  "start": 52.349
+ },
+ {
+  "word": "never",
+  "start": 52.619
+ },
+ {
+  "word": "once",
+  "start": 52.889
+ },
+ {
+  "word": "tested",
+  "start": 53.16
+ },
+ {
+  "word": "with",
+  "start": 53.43
+ },
+ {
+  "word": "water",
+  "start": 53.7
+ },
+ {
+  "word": "Afterwards",
+  "start": 54.191
+ },
+ {
+  "word": "the",
+  "start": 54.461
+ },
+ {
+  "word": "survivors",
+  "start": 54.731
+ },
+ {
+  "word": "brought",
+  "start": 55.001
+ },
+ {
+  "word": "the",
+  "start": 55.272
+ },
+ {
+  "word": "first",
+  "start": 55.542
+ },
+ {
+  "word": "class",
+  "start": 55.812
+ },
+ {
+  "word": "action",
+  "start": 56.082
+ },
+ {
+  "word": "against",
+  "start": 56.353
+ },
+ {
+  "word": "a",
+  "start": 56.623
+ },
+ {
+  "word": "big",
+  "start": 56.893
+ },
+ {
+  "word": "company",
+  "start": 57.164
+ },
+ {
+  "word": "and",
+  "start": 57.434
+ },
+ {
+  "word": "now",
+  "start": 57.704
+ },
+ {
+  "word": "every",
+  "start": 57.974
+ },
+ {
+  "word": "large",
+  "start": 58.245
+ },
+ {
+  "word": "tank",
+  "start": 58.515
+ },
+ {
+  "word": "needs",
+  "start": 58.785
+ },
+ {
+  "word": "a",
+  "start": 59.055
+ },
+ {
+  "word": "real",
+  "start": 59.326
+ },
+ {
+  "word": "engineer's",
+  "start": 59.596
+ },
+ {
+  "word": "stamp",
+  "start": 59.866
+ },
+ {
+  "word": "And",
+  "start": 60.356
+ },
+ {
+  "word": "for",
+  "start": 60.627
+ },
+ {
+  "word": "thirty",
+  "start": 60.897
+ },
+ {
+  "word": "years",
+  "start": 61.167
+ },
+ {
+  "word": "the",
+  "start": 61.438
+ },
+ {
+  "word": "North",
+  "start": 61.708
+ },
+ {
+  "word": "End",
+  "start": 61.978
+ },
+ {
+  "word": "smelled",
+  "start": 62.248
+ },
+ {
+  "word": "of",
+  "start": 62.519
+ },
+ {
+  "word": "candy",
+  "start": 62.789
+ },
+ {
+  "word": "every",
+  "start": 63.059
+ },
+ {
+  "word": "time",
+  "start": 63.329
+ },
+ {
+  "word": "summer",
+  "start": 63.6
+ },
+ {
+  "word": "came",
+  "start": 63.87
+ },
+ {
+  "word": "around",
+  "start": 64.14
+ }
+]
