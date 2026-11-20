@@ -32,6 +32,13 @@ kick, effect and audio cue re-times with it.
 
 ## Voice
 
+> **The bundled `voice/voice.wav` is a placeholder**: machine TTS
+> (espeak-ng, per-sentence speed-fitted into the plan's sentence slots,
+> 48 kHz stereo, exactly the composition length). Replace it with a real
+> recording, regenerate `voice/words.json` with word timestamps from the
+> same transcript, and re-run the two commands below — every shot, camera
+> key, kick and audio cue re-times from them.
+
 `voice/voice.wav` + `voice/words.json` (word timestamps; the script and the
 fact sheet are in `SCRIPT.md`). Shapes accepted by retime.py: a list of
 `{"word", "start"}` (whisper), pairs, or `{"words": [...]}`. Then:
@@ -68,6 +75,28 @@ render against the planned cuts/x-fades/flash/kicks.
 `node scripts/sbs_sheet.py <frames>` builds a side-by-side contact sheet for
 the look-match loop (SKILL.md steps 9–10).
 
+### Rendering on CPU-only machines (this repo was rendered in one)
+
+On a machine without a GPU, Chrome must rasterize in software (SwiftShader),
+and two extra rules apply that the reference pipeline never hits on a GPU
+machine:
+
+- **Never render with `--concurrency > 1`.** With SwiftShader, every tab
+  beyond the first shares one GPU process; the canvases in background tabs
+  never composite, the captured frames come out plain white, the encoded
+  chunk's bitrate collapses to ~10–20 kb/s, and Remotion still reports
+  success. Check each chunk's bitrate before concatenating — a 1080×1920
+  chunk under ~200 kb/s is blank.
+- 2-canvas x-fade pages render fine at concurrency 1 even in software —
+  single tab only — and multiple `remotion render` *processes* (one chrome
+  each, concurrency 1) can safely run on disjoint frame ranges.
+- **Chunk + concat.** Software GL at 1080×1920 with the full post chain runs
+  ~15–30 s per frame, so render the timeline in chunks — crashed windows can
+  be re-rendered alone, and
+  `npx remotion ffmpeg -f concat -safe 0 -c copy` stitches them. Partition
+  the x-fade windows ([1258–1265], [1355–1363], [1419–1427], [1620–1628],
+  [1805–1813], ± a couple frames) into their own chunks first.
+
 ## Layout
 
 ```
@@ -87,6 +116,11 @@ SCRIPT.md        the sourced script + shot plan
 
 ## Open items
 
+- The narration is a machine-TTS placeholder (see Voice above).
+- The bundled render (`out/molasses/molasses-short.mp4`, not in git when
+  ignored) was made at `--scale 1` (1080×1920), not the documented 1.3333
+  (1440×2560): software rendering cost. To re-render at 2K on a GPU machine,
+  use the same pipeline with `--scale 1.3333`.
 - `audio/music.py` still carries the bridge short's section map; retime its
   section table (hook → burst → aftermath) before rendering music.
 - The elevated train from sentence 2 is voiced but not modelled (the aerial
