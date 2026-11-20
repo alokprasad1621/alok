@@ -62,7 +62,7 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
   }), [camera, scene]);
   useEffect(() => () => { try { fx.ink?.dispose?.(); } catch { /* the canvas teardown may already have taken the pass */ } }, [fx]);
   const post = useMemo(() => (
-    <EffectComposer multisampling={4}>
+    <EffectComposer multisampling={msOverride()}>
       {on.ink ? <primitive object={fx.ink} dispose={null} /> : (null as unknown as React.ReactElement)}
       {on.lens && on.pre ? <primitive object={fx.lens.pre} dispose={null} /> : (null as unknown as React.ReactElement)}
       {on.lens ? <primitive object={fx.lens.main} dispose={null} /> : (null as unknown as React.ReactElement)}
@@ -91,6 +91,8 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
   );
 };
 
+/** test stills only: inputProps `{ post: { ms: 0 } }` overrides the composer MSAA sample count (default 4) */
+const msOverride = (): number => (getInputProps() as { post?: { ms?: number } }).post?.ms ?? 4;
 /** test stills only: inputProps `{ post: { dpr: 0.5 } }` forces the WebGL buffer size (R3F clamps dpr to >= 1 by default) */
 const dprOverride = () => (getInputProps() as { post?: { dpr?: number } }).post?.dpr;
 const ShotView: React.FC<{ id: number; kit: Kit; alpha: number }> = ({ id, kit, alpha }) => (
