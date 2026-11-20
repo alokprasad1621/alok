@@ -12,7 +12,7 @@ export { FPS, TOTAL, S, W };
 
 export type V3 = [number, number, number];
 
-export const D0 = 6.0; // street level (matches the bridge template's ground convention)
+export const D0 = 0; // street level: cameras, DOF focus points and stage places are all written in street-level coords
 export const TANK: V3 = [58, D0 + 1.2, -12]; // shell bottom centre (pad top); the pad is 1.2 m tall
 export const TANK_R = 13.5; // 90 ft -> 27 m, storybook-rounded
 export const TANK_H = 15.2; // 50 ft -> 15.2 m

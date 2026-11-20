@@ -67,9 +67,18 @@ def load_voice():
 
 
 def speech_spans(words, merge=0.3):
+    # words.json rows are {"word", "start"(s)} (retime.py format); end = the next word's start
     sp = []
-    for w in words:
-        s, e = float(w["s"]), float(w["e"])
+    for i, w in enumerate(words):
+        s = float(w["s"]) if "s" in w else float(w.get("start", w.get("t", w.get("from", 0.0))))
+        if "e" in w:
+            e = float(w["e"])
+        elif i + 1 < len(words):
+            nx = words[i + 1]
+            ns = float(nx["s"]) if "s" in nx else float(nx.get("start", nx.get("t", nx.get("from", s + 0.3))))
+            e = s + (ns - s)
+        else:
+            e = s + 0.3
         if sp and s - sp[-1][1] < merge:
             sp[-1][1] = max(sp[-1][1], e)
         else:
@@ -203,9 +212,25 @@ def ffmpeg_ebur(path):
 
 
 # ================================================================ main
+def norm_words(raw):
+    # words.json rows are {"word", "start"(s)} (retime.py format) or {"s","e"}; normalise to "s"/"e"
+    out = []
+    for i, w in enumerate(raw):
+        s = float(w["s"]) if "s" in w else float(w.get("start", w.get("t", w.get("from", 0.0))))
+        if "e" in w:
+            e = float(w["e"])
+        elif i + 1 < len(raw):
+            nx = raw[i + 1]
+            e = float(nx["s"]) if "s" in nx else float(nx.get("start", nx.get("t", nx.get("from", s + 0.3))))
+        else:
+            e = s + 0.3
+        out.append({"word": w.get("word", ""), "s": s, "e": e})
+    return out
+
+
 def main():
     t_start = time.time()
-    words = T.words(os.path.join(ROOT, "voice", "words.json"))
+    words = norm_words(T.words(os.path.join(ROOT, "voice", "words.json")))
     spans = speech_spans(words)
     v = load_voice()
     v_ref = integrated(v)

@@ -18,13 +18,17 @@ LID_LAND = BURST + 2.6       # the lid lands (story.ts kick pair)
 SHOOK = fr(1410)             # "shook": the cork pops
 HITS = [fr(1780), fr(1788), fr(1796)]   # the three hammer blows on the sign
 
+# march/score grid (music.py; kept at the template's swing tempo, see README open items)
+PUSH0 = 47.24
+SWING_T = 1.69
+
 # id: (first frame, end frame, light, crowd) - crowds per story.ts SHOTS
 SHOTS = {
     1: (0, 130, "day", "none"), 2: (130, 326, "day", "none"), 3: (326, 470, "day", "street"),
     4: (470, 614, "day", "street"), 5: (614, 694, "day", "none"), 6: (694, 857, "day", "street"),
     7: (857, 948, "day", "none"), 8: (948, 1099, "day", "none"), 9: (1099, 1147, "day", "flee"),
-    10: (1147, 1262, "day", "wade"), 11: (1262, 1343, "golden", "calm"), 12: (1343, 1423, "golden", "calm"),
-    13: (1423, 1583, "golden", "calm"), 14: (1583, 1809, "day", "sign"), 15: (1809, TOTAL, "day", "cleanup"),
+    10: (1147, 1262, "day", "wade"), 11: (1262, 1359, "golden", "calm"), 12: (1359, 1423, "golden", "calm"),
+    13: (1423, 1624, "golden", "calm"), 14: (1624, 1809, "day", "sign"), 15: (1809, TOTAL, "day", "cleanup"),
 }
 XFADE = {11: 8, 12: 8, 13: 8, 14: 8, 15: 8}
 

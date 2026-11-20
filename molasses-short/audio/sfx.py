@@ -106,7 +106,7 @@ def cues():
         add(Cue(tm, "running_feet", "wet running footsteps past the lens", (lambda r=rr(): (lp(G.stroll_step(r, r.uniform(0.7, 1.3)), 6500), 0.0)),
                 -12, p=float(np.clip(-0.6 + k * 0.09, -0.7, 0.7)) + R.uniform(-0.15, 0.15), send=0.2, group="running_steps"))
     add(Cue(T.shot_t(9)[0] + 0.15, "flee_crowd", "everyone runs: shouts, whoas, splashing chaos",
-            lambda: (_cheer(1.15, rng(1099)) * 0.9 + _whoas(rng(1100)), 0.0), -8, lpf=6000, send=0.3))
+            lambda: (_sum2(_cheer(1.15, rng(1099)) * 0.9, _whoas(rng(1100))), 0.0), -8, lpf=6000, send=0.3))
     for tm, kd in [(38.5, "ugh"), (39.6, "ow"), (40.1, "ugh"), (41.0, "oh")]:
         add(Cue(tm, "groans", "hurt people sitting in the settled flood", (lambda r=rr(), kd=kd: (_groans(r, [(0.0, kd, 1.0)]), 0.0)), -13,
                 lpf=5000, send=0.22, group="groans"))
@@ -116,8 +116,8 @@ def cues():
 
     # ------------------------------------------------ golden beats (shots 11-13): calm water + the cork pop on "shook"
     add(Cue(T.SHOOK, "cork_pop", "the bottle gives: cork clink + fizz burst in the golden quiet",
-            lambda: (G.clink(rng(1410), 1900, 0.1) * 0.7 + G.bubbles(0.7, rng(1411), 34, 700, 3800,
-                    (0.003, 0.008), np.exp(-tt(0.7) / 0.16)) * 0.35, 0.0), -8, p=0.25, send=0.1))
+            lambda: (_sum2(G.clink(rng(1410), 1900, 0.1) * 0.7, G.bubbles(0.7, rng(1411), 34, 700, 3800,
+                    (0.003, 0.008), np.exp(-tt(0.7) / 0.16)) * 0.35), 0.0), -8, p=0.25, send=0.1))
     add(Cue(T.shot_t(12)[0] + 0.4, "stoop_babble", "warm voices at the stoop", lambda: (_murmur(2.3, rng(1360), 5, early=False), 0.0), -20,
             lpf=3000, send=0.3))
     for k, tm in enumerate(np.arange(T.shot_t(13)[0] + 1.0, T.shot_t(13)[1] - 0.3, 2.4)):
@@ -143,7 +143,7 @@ def cues():
     add(Cue(c15[0] + 0.6, "cleanup_murmur", "the sweet-tooth kids + the adults: light chatter and laughing",
             lambda: (_murmur(5.4, rng(1790), 10, early=False), 0.0), -15, lpf=3600, send=0.35))
     add(Cue(T.DUR - 2.6, "kid_giggles", "two kids giggling over the traded candy, right on the ending",
-            lambda: (pan(G.hurrah(rng(1900), 300, 1.3, True) * 0.5, 0.3) + pan(G.hurrah(rng(1901), 290, 1.35, True) * 0.5, 0.45), 0.0), -13,
+            lambda: (_sum2(pan(G.hurrah(rng(1900), 300, 1.3, True) * 0.5, 0.3), pan(G.hurrah(rng(1901), 290, 1.35, True) * 0.5, 0.45)), 0.0), -13,
             lpf=6500, send=0.15))
     return C
 
@@ -216,6 +216,18 @@ def _murmur(dur, r, voices, early=False):
             h = G.hurrah(r, r.uniform(110, 230), r.uniform(1.0, 1.18))
             place(out, pan(lp(h, 3000, 1) * 0.5, r.uniform(-0.8, 0.8)), r.uniform(0.2, 1.6))
     return fades(out, 0.25, 0.8)
+
+
+def _sum2(a, b):
+    if a.ndim == 1:
+        a = np.vstack([a, a])
+    if b.ndim == 1:
+        b = np.vstack([b, b])
+    n = max(a.shape[1], b.shape[1], 1)
+    out = np.zeros((2, n))
+    out[:, :a.shape[1]] += a
+    out[:, :b.shape[1]] += b
+    return out
 
 
 def _cheer(dur, r):

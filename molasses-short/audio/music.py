@@ -346,12 +346,12 @@ def build():
         for mm in CH[c]["hi"]:
             b.add("vibes", I.vibes(F(mm), 0.22, _r(), dur=0.9, damp=0.3, trem_depth=0.2), t + 0.02, 0.3)
     for mm in [58, 62, 65, 70]:
-        b.add("vibes", I.vibes(F(mm), 0.32, _r(), dur=0.6, damp=None, trem_depth=0.3), 67.0, 0.2)
-    b.add("triangle", I.triangle(0.25, _r(), dur=0.5), 67.0, 0.3)
+        b.add("vibes", I.vibes(F(mm), 0.32, _r(), dur=0.6, damp=None, trem_depth=0.3), T.DUR - 0.8, 0.2)
+    b.add("triangle", I.triangle(0.25, _r(), dur=0.5), T.DUR - 0.8, 0.3)
     b.cues.append((62.0, "relaxed tourist version: swung, laid-back vibes melody, walking pizzicato bass, brushes"))
-    b.cues.append((67.0, "final Bb chord on 'tourists' (66.72-67.24), rings out, faded to silence at 67.5"))
+    b.cues.append((T.DUR - 0.8, "final Bb chord on 'tourists' (66.72-67.24), rings out, faded to silence at 67.5"))
     end = np.ones(N)
-    a = ns(67.3)
+    a = ns(T.DUR - 0.3)
     end[a:] = np.linspace(1, 0, N - a) ** 1.5
     for k in b.tr:
         b.tr[k] *= end[None, :]

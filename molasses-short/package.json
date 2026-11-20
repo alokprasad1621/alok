@@ -22,8 +22,9 @@
     "three": "0.169.0"
   },
   "devDependencies": {
-    "typescript": "5.6.3",
     "@types/react": "18.3.12",
-    "@types/three": "0.169.0"
+    "@types/three": "0.169.0",
+    "tsx": "^4.23.15",
+    "typescript": "5.6.3"
   }
 }

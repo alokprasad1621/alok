@@ -3,3 +3,6 @@ out/
 __pycache__/
 *.pyc
 .vibe/
+molasses-short/audio/_cache/
+molasses-short/audio/mix.wav
+molasses-short/audio/stem_*.wav

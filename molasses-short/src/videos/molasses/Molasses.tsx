@@ -60,16 +60,16 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
     grade: new GradeEffect(GRADES.day, GRADE_STRENGTH.day),
     grain: new GrainEffect({ amount: 0.025, cellPx: 1.5 }), // film grain, OFF by default (inputProps post.grain): the reference measures no grain and it quadruples the file size
   }), [camera, scene]);
-  useEffect(() => () => fx.ink.dispose(), [fx]);
+  useEffect(() => () => { try { fx.ink?.dispose?.(); } catch { /* the canvas teardown may already have taken the pass */ } }, [fx]);
   const post = useMemo(() => (
     <EffectComposer multisampling={4}>
-      {on.ink ? <primitive object={fx.ink} dispose={null} /> : <></>}
-      {on.lens && on.pre ? <primitive object={fx.lens.pre} dispose={null} /> : <></>}
-      {on.lens ? <primitive object={fx.lens.main} dispose={null} /> : <></>}
-      {on.bloom ? <primitive object={fx.bloom} dispose={null} /> : <></>}
+      {on.ink ? <primitive object={fx.ink} dispose={null} /> : (null as unknown as React.ReactElement)}
+      {on.lens && on.pre ? <primitive object={fx.lens.pre} dispose={null} /> : (null as unknown as React.ReactElement)}
+      {on.lens ? <primitive object={fx.lens.main} dispose={null} /> : (null as unknown as React.ReactElement)}
+      {on.bloom ? <primitive object={fx.bloom} dispose={null} /> : (null as unknown as React.ReactElement)}
       <primitive object={fx.tone} dispose={null} />
-      {on.grade ? <primitive object={fx.grade} dispose={null} /> : <></>}
-      {on.grain ? <primitive object={fx.grain} dispose={null} /> : <></>}
+      {on.grade ? <primitive object={fx.grade} dispose={null} /> : (null as unknown as React.ReactElement)}
+      {on.grain ? <primitive object={fx.grain} dispose={null} /> : (null as unknown as React.ReactElement)}
     </EffectComposer>
   ), [fx, on]);
   const cam = camera as THREE.PerspectiveCamera;
